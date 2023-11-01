@@ -46,7 +46,7 @@
                     @endauth
             @endif
                 <li class="nav-item">
-                    <a class="nav-link active" href="">Productos</a>
+                    <a class="nav-link active" href="/productos">Productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="">Comprar Productos</a>

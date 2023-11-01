@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/productos', function () {
+    return file_get_contents(public_path('html/productos.html'));
+});
+
 
 /*Ruta de la pagina principal, para que se conecte con los demas modulos*/
 Route::get('/welcome', function () {
