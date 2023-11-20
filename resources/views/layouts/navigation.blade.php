@@ -1,6 +1,9 @@
 
 <style>
     /* Estilos para el logo*/
+    body {
+    font-family: "TCCC-UnityHeadline Regular";
+    }
     .shrink-0 {
         margin: 10px;
         padding: 10px;
@@ -25,7 +28,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ auth()->check() ? route('dashboard') : route('welcome') }}">
                         <img  src="{{ asset('img/logo.png') }}" alt="Logo de Coca-Cola Colombia" > 
                     </a>
                 </div>
@@ -33,7 +36,22 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Principal pagina') }}
+                        {{ __('PAGINA PRINCIPAL') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('product_client')" :active="request()->routeIs('dashboard')">
+                        {{ __('PRODUCTOS') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('shop')" :active="request()->routeIs('dashboard')">
+                        {{ __('TIENDA') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('client_service')" :active="request()->routeIs('dashboard')">
+                        {{ __('SERVICIO AL CLIENTE') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -65,7 +83,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Cerrar secion') }}
+                                {{ __('Cerrar seseión') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>

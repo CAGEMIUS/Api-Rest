@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('role')->nullable(); /* <-- fila de la tabla en la base de datos para el ROL de un usuario */
             $table->rememberToken();
             $table->timestamps();
         });

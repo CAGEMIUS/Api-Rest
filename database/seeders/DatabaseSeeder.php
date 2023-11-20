@@ -9,12 +9,11 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
+     *   $this-> call([ProductSeeder::class,]);
      */
     public function run(): void
     {
-        $this-> call([
-            ProductSeeder::class,
-        ]);
+        $this->call(ProductsTableSeeder::class);
     }
 }
 

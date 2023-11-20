@@ -1,0 +1,65 @@
+body {
+    font-family: "TCCC-UnityHeadline Regular";
+}
+
+ul li{
+    margin-left: 20px;
+}
+
+/*Estilos de la informacion servicio al cliente*/
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #C90703;
+    font-size: 90PX;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 800px){
+    h1 {
+        color: #C90703;
+        font-size: 50PX;
+    }
+}
+
+.categorias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categorias img {
+    margin-right: 20px;
+    width: 25%;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+    color: #C90703;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.calls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calls img {
+    margin-right: 20px;
+    height: 100px;
+    margin: 15px;
+}
+
+
+.calls h2 {
+    text-align: left;
+}
